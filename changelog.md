@@ -31,3 +31,10 @@ I followed the steps from [CodingGarden react-ts-starter project](https://github
   - eslint-config-airbnb-typescript
   - eslint-plugin-import
   - eslint-plugin-jsx-a11y
+- Download prettier dependencies
+  - eslint-config-prettier
+  - eslint-plugin-prettier
+  - prettier
+- Config eslintrc for prettier
+- Config tsconfig.json
+- add .prettierrc.cjs
