@@ -2,7 +2,9 @@
 
 From this point onwards I would try to record nature of change.
 
-### Step configure **_eslint_** and **_Prettier_**
+### v0.0.1
+
+#### Step configure **_eslint_** and **_Prettier_**
 
 I followed the steps from [CodingGarden react-ts-starter project](https://github.com/CodingGarden/react-ts-starter)
 
@@ -38,3 +40,9 @@ I followed the steps from [CodingGarden react-ts-starter project](https://github
 - Config eslintrc for prettier
 - Config tsconfig.json
 - add .prettierrc.cjs
+- added husky githooks
+  - configure to run pre-commit with <code>npm run lint</code>
+
+### v1.0.0
+
+#### Installation of Material-UI v5
