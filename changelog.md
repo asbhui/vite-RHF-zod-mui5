@@ -26,3 +26,8 @@ I followed the steps from [CodingGarden react-ts-starter project](https://github
    ✔ Which package manager do you want to use? · npm
    Installing @typescript-eslint/eslint-plugin@latest, eslint-plugin-react@latest, @typescript-eslint/parser@latest
   ```
+- Download further dependencies
+  - eslint-config-airbnb
+  - eslint-config-airbnb-typescript
+  - eslint-plugin-import
+  - eslint-plugin-jsx-a11y
