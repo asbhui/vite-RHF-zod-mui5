@@ -46,3 +46,9 @@ I followed the steps from [CodingGarden react-ts-starter project](https://github
 ### v1.0.0
 
 #### Installation of Material-UI v5
+
+- Instead of using Roboto, I wanted to use Nunito font
+  - npm install @fontsource/nunito
+  - npm install @fontsource/poppins
+  - theme selection is available
+  - responsive font size is available
