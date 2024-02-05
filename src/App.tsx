@@ -1,33 +1,27 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '../../../../../../vite.svg';
-import './App.css';
+import { Box, Button, Container, Typography } from '@mui/material';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((prev) => prev + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
+      <Box sx={{ my: 4, mx: 'auto' }} display="flex" gap={2} flexDirection="column">
+        <Typography variant="h1" fontWeight="bold">
+          Hello Vite + React!
+        </Typography>
+        <Typography variant="h2">Lorem, ipsum.</Typography>
+        <Typography variant="h3">Lorem ipsum dolor sit.</Typography>
+        <Typography variant="h4">Lorem ipsum dolor sit amet consectetur.</Typography>
+        <Typography variant="h5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</Typography>
+        <Typography variant="h6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, numquam!</Typography>
+        <Typography variant="body1" color="text.secondary" fontWeight="bold">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore cumque saepe commodi!
+        </Typography>
+        <Typography variant="body2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem aut cumque quo laboriosam sapiente.
+        </Typography>
+        <Button color="secondary" variant="contained">
+          Hello world!
+        </Button>
+      </Box>
+    </Container>
   );
 }
-
-export default App;

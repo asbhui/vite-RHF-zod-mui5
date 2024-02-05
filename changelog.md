@@ -2,7 +2,9 @@
 
 From this point onwards I would try to record nature of change.
 
-### Step configure **_eslint_** and **_Prettier_**
+### v0.0.1
+
+#### Step configure **_eslint_** and **_Prettier_**
 
 I followed the steps from [CodingGarden react-ts-starter project](https://github.com/CodingGarden/react-ts-starter)
 
@@ -38,3 +40,24 @@ I followed the steps from [CodingGarden react-ts-starter project](https://github
 - Config eslintrc for prettier
 - Config tsconfig.json
 - add .prettierrc.cjs
+- added husky githooks
+  - configure to run pre-commit with <code>npm run lint</code>
+
+### v1.0.0
+
+#### Installation of Material-UI v5
+
+- Instead of using Roboto, I wanted to use Nunito font
+  - npm install @fontsource/nunito
+  - npm install @fontsource/poppins
+  - theme selection is available
+  - responsive font size is available
+
+### v1.1.0
+
+#### Installation of ViTest
+
+- npm install vitest
+- npm install @testing-library/react
+- npm install @testing-library/user-event
+- npm install @testing-library/jest-dom
