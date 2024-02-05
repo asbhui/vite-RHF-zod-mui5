@@ -35,5 +35,9 @@ module.exports = {
     'no-debugger': 'warn',
     'no-duplicate-case': 'warn',
     'no-duplicate-imports': 'warn',
+    'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/require-default-props': 'off',
+    'react/function-component-definition': 'off',
   },
 };
