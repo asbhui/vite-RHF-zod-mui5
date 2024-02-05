@@ -52,3 +52,12 @@ I followed the steps from [CodingGarden react-ts-starter project](https://github
   - npm install @fontsource/poppins
   - theme selection is available
   - responsive font size is available
+
+### v1.1.0
+
+#### Installation of ViTest
+
+- npm install vitest
+- npm install @testing-library/react
+- npm install @testing-library/user-event
+- npm install @testing-library/jest-dom
