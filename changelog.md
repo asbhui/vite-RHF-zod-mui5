@@ -61,3 +61,4 @@ I followed the steps from [CodingGarden react-ts-starter project](https://github
 - npm install @testing-library/react
 - npm install @testing-library/user-event
 - npm install @testing-library/jest-dom
+- npm install jsdom
