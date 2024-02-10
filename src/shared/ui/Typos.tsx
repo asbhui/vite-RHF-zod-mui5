@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import { Box, Button, Container, Typography } from '@mui/material';
 
-export default function App() {
+export function Typos() {
   return (
     <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
       <Box sx={{ my: 4, mx: 'auto' }} display="flex" gap={2} flexDirection="column">
@@ -18,9 +19,11 @@ export default function App() {
         <Typography variant="body2">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem aut cumque quo laboriosam sapiente.
         </Typography>
-        <Button color="secondary" variant="contained">
-          Hello world!
-        </Button>
+        <Box maxWidth={100} m="auto">
+          <Button color="secondary" variant="contained" component={Link} to="/">
+            Home
+          </Button>
+        </Box>
       </Box>
     </Container>
   );
