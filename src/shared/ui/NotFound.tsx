@@ -1,5 +1,5 @@
-import { Container, Typography, Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { Box, Button, Container, Typography } from '@mui/material';
 
 export const NotFound = () => (
   <Container sx={{ textAlign: 'center' }}>

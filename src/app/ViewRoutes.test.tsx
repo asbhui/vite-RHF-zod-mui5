@@ -1,33 +1,20 @@
+import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { RouterProvider, createMemoryRouter } from 'react-router-dom';
-import { WrappedViewRoutes, routesFromElements } from './ViewRoutes';
+
+import { routesFromElements, WrappedViewRoutes } from './ViewRoutes';
 
 describe('App', () => {
-  it('Renders hello world', () => {
-    // ARRANGE
+  it('Renders hello world', async () => {
     render(<WrappedViewRoutes />);
-    // ACT
-    // EXPECT
+    await waitFor(() => screen.getByRole('heading', { level: 1 }));
+
     expect(
       screen.getByRole('heading', {
         level: 1,
       }),
     ).toHaveTextContent('Home');
   });
-
-  // it('Renders not found if invalid path', () => {
-  //   render(
-  //     <MemoryRouter initialEntries={['/this-route-does-not-exist']}>
-  //       <ViewRoutes />
-  //     </MemoryRouter>,
-  //   );
-  //   expect(
-  //     screen.getByRole('heading', {
-  //       level: 1,
-  //     }),
-  //   ).toHaveTextContent('404');
-  // });
 
   it('Renders not found if invalid path', async () => {
     const inMemoryRouter = createMemoryRouter(routesFromElements, {

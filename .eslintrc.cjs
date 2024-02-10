@@ -28,16 +28,30 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'prettier'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
     'no-console': 'warn',
-    'no-debugger': 'warn',
-    'no-duplicate-case': 'warn',
-    'no-duplicate-imports': 'warn',
+    'react/react-in-jsx-scope': 0,
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
     'react/function-component-definition': 'off',
+    'react-hooks/exhaustive-deps': 'error',
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          // Side effect imports.
+          ['^\\u0000'],
+          // Packages. `react` related packages come first.
+          ['^react', '^@?\\w'],
+          // Parent imports. Put `..` last.
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+        ],
+      },
+    ],
+    'simple-import-sort/exports': 'error',
   },
 };

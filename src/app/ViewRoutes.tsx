@@ -1,27 +1,13 @@
-import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements } from 'react-router-dom';
-import { NotFound } from '../shared/ui/NotFound';
-import { Home } from '../shared/ui/Home';
-import { Typos } from '../shared/ui/Typos';
+import { lazy } from 'react';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
-/* export const ViewRoutes = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="typos" element={<Typos />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
-};
-
-export const WrappedViewRoutes = () => (
-  <BrowserRouter>
-    <ViewRoutes />
-  </BrowserRouter>
-);
- */
+const Root = lazy(() => import('../shared/ui/Root').then((module) => ({ default: module.Root })));
+const Home = lazy(() => import('../shared/ui/Home').then((module) => ({ default: module.Home })));
+const Typos = lazy(() => import('../shared/ui/Typos').then((module) => ({ default: module.Typos })));
+const NotFound = lazy(() => import('../shared/ui/NotFound').then((module) => ({ default: module.NotFound })));
 
 export const routesFromElements = createRoutesFromElements(
-  <Route path="/">
+  <Route path="/" element={<Root />}>
     <Route index element={<Home />} />
     <Route path="typos" element={<Typos />} />
     <Route path="*" element={<NotFound />} />

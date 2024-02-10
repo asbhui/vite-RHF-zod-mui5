@@ -1,5 +1,5 @@
-import { Button, Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { Button, Container, Typography } from '@mui/material';
 
 export const Home = () => (
   <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
