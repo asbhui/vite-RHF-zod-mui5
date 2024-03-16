@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Stack, Typography } from '@mui/material';
+import { Box, FormControl, FormLabel, Stack, Typography } from '@mui/material';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 
@@ -132,19 +132,21 @@ const top100Films = [
 
 export default function ComboBox() {
   return (
-    <FormControl>
-      <Stack direction="row" spacing={2}>
-        <FormLabel htmlFor="combo-box-demo">
-          <Typography variant="h4">Movie</Typography>
-        </FormLabel>
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={top100Films}
-          sx={{ width: 300 }}
-          renderInput={(params) => <TextField {...params} />}
-        />
-      </Stack>
-    </FormControl>
+    <Box marginTop={5}>
+      <FormControl>
+        <Stack direction="row" spacing={2}>
+          <FormLabel htmlFor="combo-box-demo">
+            <Typography variant="h4">Movie</Typography>
+          </FormLabel>
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={top100Films}
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} />}
+          />
+        </Stack>
+      </FormControl>
+    </Box>
   );
 }
