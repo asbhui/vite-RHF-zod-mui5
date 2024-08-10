@@ -7,5 +7,8 @@ export const Home = () => (
     <Button color="secondary" variant="contained" component={Link} to="/typos">
       Typos
     </Button>
+    <Button color="secondary" variant="contained" component={Link} to="/comboBox">
+      Combo
+    </Button>
   </Container>
 );
