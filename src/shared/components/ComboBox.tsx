@@ -1,6 +1,5 @@
-import { FormControl, FormLabel, Stack, Typography } from '@mui/material';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
+import { Autocomplete, Box, Button, FormControl, FormLabel, Stack, TextField, Typography } from '@mui/material';
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
@@ -124,7 +123,7 @@ const top100Films = [
   { label: 'Toy Story', year: 1995 },
   { label: 'Bicycle Thieves', year: 1948 },
   { label: 'The Kid', year: 1921 },
-  { label: 'Inglourious Basterds', year: 2009 },
+  { label: 'Inglourious Bastards', year: 2009 },
   { label: 'Snatch', year: 2000 },
   { label: '3 Idiots', year: 2009 },
   { label: 'Monty Python and the Holy Grail', year: 1975 },
@@ -144,6 +143,11 @@ export default function ComboBox() {
           sx={{ width: 300 }}
           renderInput={(params) => <TextField {...params} />}
         />
+        <Box maxWidth={100} m="auto">
+          <Button color="secondary" variant="contained" component={Link} to="/">
+            Home
+          </Button>
+        </Box>
       </Stack>
     </FormControl>
   );
