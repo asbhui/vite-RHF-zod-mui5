@@ -7,12 +7,12 @@
   "homepage": "https://asbhui.github.io/vite-rhf-zod-mui5",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --base=/vite-rhf-zod-mui5",
     "lint": "eslint . --max-warnings=0",
     "lint:fix": "eslint .  --fix",
     "test": "vitest run --coverage",
     "test:watch": "vitest",
-    "preview": "vite preview",
+    "preview": "vite preview --base=/vite-rhf-zod-mui5",
     "prepare": "husky",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

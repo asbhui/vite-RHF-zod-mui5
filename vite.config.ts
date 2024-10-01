@@ -11,11 +11,10 @@ export default ({ mode }: { mode: string }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return defineConfig({
-    appType: 'spa',
     build: {
       chunkSizeWarningLimit: 1600,
-      minify: 'esbuild',
-      outDir: 'build',
+      // minify: 'esbuild',
+      // outDir: 'build',
       rollupOptions: {
         treeshake: true,
       },
