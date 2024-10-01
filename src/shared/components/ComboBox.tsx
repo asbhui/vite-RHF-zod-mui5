@@ -132,17 +132,19 @@ const top100Films = [
 export default function ComboBox() {
   return (
     <FormControl>
-      <Stack direction="row" spacing={2}>
-        <FormLabel htmlFor="combo-box-demo">
-          <Typography variant="h4">Movie</Typography>
-        </FormLabel>
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={top100Films}
-          sx={{ width: 300 }}
-          renderInput={(params) => <TextField {...params} />}
-        />
+      <Stack spacing={2}>
+        <Stack direction="row" spacing={2}>
+          <FormLabel htmlFor="combo-box-demo">
+            <Typography variant="h4">Movie</Typography>
+          </FormLabel>
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={top100Films}
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} />}
+          />
+        </Stack>
         <Box maxWidth={100} m="auto">
           <Button color="secondary" variant="contained" component={Link} to="/">
             Home
