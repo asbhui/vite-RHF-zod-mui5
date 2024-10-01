@@ -3,7 +3,16 @@ import { Container } from '@mui/material';
 
 export const Root = () => {
   return (
-    <Container maxWidth="sm" sx={{ bgcolor: '#f5f5f5' }}>
+    <Container
+      sx={{
+        height: '100vh',
+        bgcolor: '#f5f5f5',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+      }}
+    >
       <main>
         <Outlet />
       </main>
