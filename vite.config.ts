@@ -2,7 +2,7 @@
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
 
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv } from 'vite';
 
 // https://vitejs.dev/config/
