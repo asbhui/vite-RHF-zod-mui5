@@ -4,6 +4,7 @@
   "private": true,
   "version": "1.1.0",
   "type": "module",
+  "homepage": "https://asbhui.github.io/vite-rhf-zod-mui5",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,7 +13,9 @@
     "test": "vitest run --coverage",
     "test:watch": "vitest",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -49,6 +52,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^3.1.0",
+    "gh-pages": "^6.1.1",
     "husky": "^9.1.4",
     "jsdom": "^24.1.1",
     "lint-staged": "15.2.8",
