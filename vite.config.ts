@@ -11,6 +11,7 @@ export default ({ mode }: { mode: string }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return defineConfig({
+    base: '/VITE-RHF-zod-mui5/',
     build: {
       chunkSizeWarningLimit: 1600,
       // minify: 'esbuild',
